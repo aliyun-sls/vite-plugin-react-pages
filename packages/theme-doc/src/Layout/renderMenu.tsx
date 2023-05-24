@@ -1,10 +1,43 @@
 import React from 'react'
 import type { MenuProps } from 'antd'
 import { Link } from 'react-router-dom'
-import type { PathPattern } from 'react-router-dom'
+// import type { PathPattern } from 'react-router-dom'
 import { CaretDownOutlined } from '@ant-design/icons'
 
 type ItemTypes = NonNullable<MenuProps['items']>
+
+export interface Path {
+  /**
+   * A URL pathname, beginning with a /.
+   */
+  pathname: string;
+  /**
+   * A URL search string, beginning with a ?.
+   */
+  search: string;
+  /**
+   * A URL fragment identifier, beginning with a #.
+   */
+  hash: string;
+}
+
+export interface PathPattern<Path extends string = string> {
+  /**
+   * A string to match against a URL pathname. May contain `:id`-style segments
+   * to indicate placeholders for dynamic parameters. May also end with `/*` to
+   * indicate matching the rest of the URL pathname.
+   */
+  path: Path;
+  /**
+   * Should be `true` if the static portions of the `path` should be matched in
+   * the same case.
+   */
+  caseSensitive?: boolean;
+  /**
+   * Should be `true` if this pattern should match the entire URL pathname.
+   */
+  end?: boolean;
+}
 
 export const renderMenuHelper = (isTopNav: boolean) =>
   function renderMenu(

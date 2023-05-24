@@ -1,6 +1,8 @@
 import React, { useContext, useMemo } from 'react'
 import { Menu, Dropdown } from 'antd'
-import { Link, matchPath, PathPattern } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { matchPath } from "react-router";
+import { PathPattern } from './renderMenu'
 import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
@@ -115,10 +117,10 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = (props) => {
           }
           // use loadState.routePath instead of location.pathname
           // because location.pathname may contain trailing slash
-          return !!matchPath(actualMatcher, routePath)
+          return !!matchPath(actualMatcher.path, routePath)
         } else {
           return matcher.some((oneMatcher) => {
-            return !!matchPath(oneMatcher, routePath)
+            return !!matchPath(oneMatcher as any, routePath)
           })
         }
       }

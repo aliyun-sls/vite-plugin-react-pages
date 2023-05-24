@@ -4,15 +4,14 @@
  */
 
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import ReactDom from 'react-dom'
 
 import ClientAppWrapper from './ClientAppWrapper'
 import App from '../App'
 
-const container = document.getElementById('root')!
-const root = createRoot(container)
-root.render(
+ReactDom.render(
   <ClientAppWrapper>
     <App />
-  </ClientAppWrapper>
+  </ClientAppWrapper>,
+  document.getElementById('root')
 )

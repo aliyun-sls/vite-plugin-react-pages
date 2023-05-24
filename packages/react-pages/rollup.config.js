@@ -18,17 +18,17 @@ It is more flexable to use a bundler to build code for nodejs platform because:
 */
 
 export default [
-  {
-    input: ['src/node/index.ts', 'src/node/cli.ts'],
-    output: {
-      dir: 'dist/node-esm',
-      entryFileNames: `[name].mjs`,
-      format: 'esm',
-      sourcemap: true,
-    },
-    external: [],
-    plugins: [...plugins()],
-  },
+  // {
+  //   input: ['src/node/index.ts', 'src/node/cli.ts'],
+  //   output: {
+  //     dir: 'dist/node-esm',
+  //     entryFileNames: `[name].mjs`,
+  //     format: 'esm',
+  //     sourcemap: true,
+  //   },
+  //   external: [],
+  //   plugins: [...plugins()],
+  // },
   {
     input: 'src/node/index.ts',
     output: {

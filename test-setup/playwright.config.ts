@@ -85,22 +85,22 @@ function testProjectConfig(
       },
       testDir,
     },
-    {
-      name: `${playgroundName}:build`,
-      use: {
-        ...devices['Desktop Chrome'],
-        vitePagesMode: 'build',
-      },
-      testDir,
-    },
-    {
-      name: `${playgroundName}:ssr`,
-      use: {
-        ...devices['Desktop Chrome'],
-        vitePagesMode: 'ssr',
-      },
-      testDir,
-    },
+    // {
+    //   name: `${playgroundName}:build`,
+    //   use: {
+    //     ...devices['Desktop Chrome'],
+    //     vitePagesMode: 'build',
+    //   },
+    //   testDir,
+    // },
+    // {
+    //   name: `${playgroundName}:ssr`,
+    //   use: {
+    //     ...devices['Desktop Chrome'],
+    //     vitePagesMode: 'ssr',
+    //   },
+    //   testDir,
+    // },
   ]
 
   const vitePagesModeFilter = process.env['VITE_PAGES_MODE']

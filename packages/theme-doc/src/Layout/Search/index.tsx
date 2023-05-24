@@ -6,7 +6,7 @@ import {
   ProfileOutlined,
   ClearOutlined,
 } from '@ant-design/icons'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { useAllPagesOutlines } from 'vite-plugin-react-pages/client'
 
 import { useThemeCtx } from '../..'
@@ -119,7 +119,7 @@ const Search: React.FC<React.PropsWithChildren<Props>> = (props) => {
   const [popupOpen, setPopupOpen] = useState(false)
   const [keywords, setKeywords] = useState('')
   const [recentSearches, setRecentSearches] = useState<SearchResultItem[]>([])
-  const navigate = useNavigate()
+  const history = useHistory()
 
   const allPagesOutlines = useAllPagesOutlines(2000)?.allPagesOutlines
 
@@ -217,9 +217,9 @@ const Search: React.FC<React.PropsWithChildren<Props>> = (props) => {
           }
 
           if (result.type === 'title') {
-            navigate(result.page.pagePath)
+            history.push(result.page.pagePath)
           } else if (result.type === 'heading') {
-            navigate(result.page.pagePath + '#' + result.headingId)
+            history.push(result.page.pagePath + '#' + result.headingId)
           }
         }}
       >

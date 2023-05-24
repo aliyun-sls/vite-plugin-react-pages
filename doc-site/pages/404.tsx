@@ -1,8 +1,8 @@
 import React from 'react'
-import { Navigate } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 const Component404 = () => {
-  return <Navigate to="/" replace />
+  return <Redirect to="/"  />
 }
 
 export default Component404

@@ -5,12 +5,12 @@
  */
 
 import React, { useState } from 'react'
-import { HashRouter, BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { dataCacheCtx, setDataCacheCtx } from '../ctx'
 import type { PageLoaded } from '../../../clientTypes'
 
-// @ts-expect-error
-const Router = __HASH_ROUTER__ ? HashRouter : BrowserRouter
+// // @ts-expect-error
+// const Router = __HASH_ROUTER__ ? HashRouter : BrowserRouter
 // @ts-expect-error
 const basename = __HASH_ROUTER__
   ? undefined
@@ -27,13 +27,13 @@ const ClientAppWrapper: React.FC<React.PropsWithChildren<Props>> = ({
 }) => {
   const [dataCache, setDataCache] = useState<PageLoaded>(initCache ?? {})
   return (
-    <Router basename={basename}>
+    <BrowserRouter basename={basename}>
       <dataCacheCtx.Provider value={dataCache}>
         <setDataCacheCtx.Provider value={setDataCache}>
           {children}
         </setDataCacheCtx.Provider>
       </dataCacheCtx.Provider>
-    </Router>
+    </BrowserRouter>
   )
 }
 
