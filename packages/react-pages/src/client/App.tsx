@@ -29,7 +29,7 @@ const App = () => {
       {
         pageRoutes.map((path) => {
           return (
-            <Route key={path.path} path={path.path} render={() => path.element} />
+            <Route key={path.path} path={path.path} exact render={() => path.element} />
           )
         })
       }

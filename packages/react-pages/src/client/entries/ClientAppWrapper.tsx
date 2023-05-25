@@ -5,7 +5,9 @@
  */
 
 import React, { useState } from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { Router } from 'react-router-dom'
+import { createBrowserHistory } from 'history'
+
 import { dataCacheCtx, setDataCacheCtx } from '../ctx'
 import type { PageLoaded } from '../../../clientTypes'
 
@@ -15,6 +17,10 @@ import type { PageLoaded } from '../../../clientTypes'
 const basename = __HASH_ROUTER__
   ? undefined
   : import.meta.env.BASE_URL?.replace(/\/$/, '')
+
+const history = createBrowserHistory({
+  basename,
+}) // eslint-disable-line
 
 interface Props {
   readonly initCache?: PageLoaded
@@ -27,13 +33,13 @@ const ClientAppWrapper: React.FC<React.PropsWithChildren<Props>> = ({
 }) => {
   const [dataCache, setDataCache] = useState<PageLoaded>(initCache ?? {})
   return (
-    <BrowserRouter basename={basename}>
+    <Router history={history}>
       <dataCacheCtx.Provider value={dataCache}>
         <setDataCacheCtx.Provider value={setDataCache}>
           {children}
         </setDataCacheCtx.Provider>
       </dataCacheCtx.Provider>
-    </BrowserRouter>
+    </Router>
   )
 }
 
