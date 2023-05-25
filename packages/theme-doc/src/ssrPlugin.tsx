@@ -1,5 +1,5 @@
 import React from 'react'
-import { SSRPlugin } from 'vite-plugin-react-pages/clientTypes'
+import { SSRPlugin } from '@aliyun-sls/vite-plugin-react-pages/clientTypes'
 // https://ant.design/docs/react/customize-theme#server-side-render-ssr
 import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs'
 

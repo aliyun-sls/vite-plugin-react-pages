@@ -22,7 +22,7 @@ export default {
     'react',
     'react-dom',
     'react-router-dom',
-    'vite-plugin-react-pages',
+    '@aliyun-sls/vite-plugin-react-pages',
     '@mdx-js/react',
   ],
   plugins: [

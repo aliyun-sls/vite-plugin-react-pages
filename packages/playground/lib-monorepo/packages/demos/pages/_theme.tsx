@@ -1,4 +1,4 @@
-import { createTheme } from 'vite-pages-theme-doc'
+import { createTheme } from '@aliyun-sls/vite-pages-theme-doc'
 
 export default createTheme({
   topNavs: [

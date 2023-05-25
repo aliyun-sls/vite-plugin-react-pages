@@ -1,5 +1,5 @@
 import { useLayoutEffect, useEffect } from 'react'
-import { IS_SSR } from 'vite-plugin-react-pages/client'
+import { IS_SSR } from '@aliyun-sls/vite-plugin-react-pages/client'
 
 import type { I18nConfig, LocalConfig } from './ThemeConfig.doc'
 

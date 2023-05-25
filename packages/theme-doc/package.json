@@ -1,5 +1,5 @@
 {
-  "name": "vite-pages-theme-doc",
+  "name": "@aliyun-sls/vite-pages-theme-doc",
   "version": "4.1.4",
   "description": "A document theme for vite-plugin-react-pages.",
   "type": "module",
@@ -16,9 +16,9 @@
   "keywords": [
     "vite",
     "react",
-    "vite-pages",
+    "@aliyun-sls/vite-pages",
     "react-pages",
-    "vite-plugin-react-pages"
+    "@aliyun-sls/vite-plugin-react-pages"
   ],
   "license": "MIT",
   "repository": {
@@ -67,7 +67,7 @@
     "rollup": "^3.20.2",
     "rollup-plugin-postcss": "^4.0.0",
     "tslib": "^2.5.0",
-    "typescript": "^5.0.4",
-    "vite-plugin-react-pages": "workspace:*"
+    "typescript": "4.6.4",
+    "@aliyun-sls/vite-plugin-react-pages": "workspace:*"
   }
 }

@@ -6,7 +6,7 @@ import pages, {
   FileHandler,
   File,
   extractStaticData,
-} from 'vite-plugin-react-pages'
+} from '@aliyun-sls/vite-plugin-react-pages'
 
 export default defineConfig({
   plugins: [

@@ -22,6 +22,8 @@ const history = createBrowserHistory({
   basename,
 }) // eslint-disable-line
 
+window.sls_vite_page_history = history
+
 interface Props {
   readonly initCache?: PageLoaded
   readonly children: React.ReactNode

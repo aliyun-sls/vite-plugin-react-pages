@@ -7,7 +7,7 @@ import {
   ClearOutlined,
 } from '@ant-design/icons'
 import { useHistory } from 'react-router-dom'
-import { useAllPagesOutlines } from 'vite-plugin-react-pages/client'
+import { useAllPagesOutlines } from '@aliyun-sls/vite-plugin-react-pages/client'
 
 import { useThemeCtx } from '../..'
 

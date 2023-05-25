@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import * as path from 'path'
 import react from '@vitejs/plugin-react'
-import pages, { DefaultPageStrategy } from 'vite-plugin-react-pages'
+import pages, { DefaultPageStrategy } from '@aliyun-sls/vite-plugin-react-pages'
 
 export default defineConfig({
   plugins: [

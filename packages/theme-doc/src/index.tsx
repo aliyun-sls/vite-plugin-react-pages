@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
-import type { ThemeProps } from 'vite-plugin-react-pages/clientTypes'
-import { useStaticData } from 'vite-plugin-react-pages/client'
+import type { ThemeProps } from '@aliyun-sls/vite-plugin-react-pages/clientTypes'
+import { useStaticData } from '@aliyun-sls/vite-plugin-react-pages/client'
 import { useLocation } from 'react-router-dom'
 
 import AppLayout, { MDX } from './Layout'
@@ -168,5 +168,5 @@ export type {
 } from './ThemeConfig.doc'
 export { useThemeCtx } from './ctx'
 
-import { registerSSRPlugin } from 'vite-plugin-react-pages/client'
+import { registerSSRPlugin } from '@aliyun-sls/vite-plugin-react-pages/client'
 registerSSRPlugin(() => import('./ssrPlugin').then((mod) => mod.default))

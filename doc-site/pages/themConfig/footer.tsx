@@ -1,5 +1,5 @@
 import React from 'react'
-import type { FooterConfig } from 'vite-pages-theme-doc'
+import type { FooterConfig } from '@aliyun-sls/vite-pages-theme-doc'
 import {
   QuestionCircleOutlined,
   BugOutlined,

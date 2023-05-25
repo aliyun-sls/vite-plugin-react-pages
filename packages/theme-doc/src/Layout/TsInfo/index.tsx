@@ -1,5 +1,5 @@
 import React from 'react'
-import type { TsInfo as TsInfoData } from 'vite-plugin-react-pages/clientTypes'
+import type { TsInfo as TsInfoData } from '@aliyun-sls/vite-plugin-react-pages/clientTypes'
 
 import s from './index.module.css'
 

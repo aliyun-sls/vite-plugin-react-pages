@@ -1,6 +1,6 @@
 import { createContext, useContext } from 'react'
 import type { ThemeConfig, ThemeContextValue } from '.'
-import type { ThemeProps } from 'vite-plugin-react-pages/clientTypes'
+import type { ThemeProps } from '@aliyun-sls/vite-plugin-react-pages/clientTypes'
 
 export const themeConfigCtx = createContext<ThemeConfig>({})
 export const themePropsCtx = createContext<ThemeProps>({

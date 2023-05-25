@@ -69,7 +69,7 @@ function pluginFactory(opts: PluginConfig = {}): Plugin {
   const outlineInfoModuleManager = new OutlineInfoModuleManager()
 
   return {
-    name: 'vite-plugin-react-pages',
+    name: '@aliyun-sls/vite-plugin-react-pages',
     enforce: 'pre',
     config: (config, env) => ({
       optimizeDeps: {
@@ -81,7 +81,7 @@ function pluginFactory(opts: PluginConfig = {}): Plugin {
           'react-router-dom',
           '@mdx-js/react',
         ],
-        exclude: ['vite-plugin-react-pages'],
+        exclude: ['@aliyun-sls/vite-plugin-react-pages'],
       },
       define: {
         __HASH_ROUTER__: !!useHashRouter,
@@ -181,7 +181,7 @@ function pluginFactory(opts: PluginConfig = {}): Plugin {
       // vite will resolve it with v=${versionHash} query
       // so that this import can be cached
       if (id === appEntryId)
-        return `import "vite-plugin-react-pages/dist/client-bundles/entries/csr.mjs";`
+        return `import "@aliyun-sls/vite-plugin-react-pages/dist/client-bundles/entries/csr.mjs";`
       // page list
       if (id === pagesModuleId) {
         return renderPageList(await pageStrategy.getPages(), isBuild)

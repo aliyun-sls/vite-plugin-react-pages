@@ -3,7 +3,7 @@ import type { FooterConfig, FooterColumn, FooterLink } from './Layout/Footer'
 import type {
   PagesStaticData,
   ThemeProps,
-} from 'vite-plugin-react-pages/clientTypes'
+} from '@aliyun-sls/vite-plugin-react-pages/clientTypes'
 import type { PageGroups } from './analyzeStaticData'
 
 export interface ThemeConfig {

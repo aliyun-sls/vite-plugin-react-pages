@@ -1,5 +1,5 @@
 import React from 'react'
-import { createTheme, defaultSideNavs } from 'vite-pages-theme-doc'
+import { createTheme, defaultSideNavs } from '@aliyun-sls/vite-pages-theme-doc'
 
 import Component404 from './404'
 import { footerConfig } from './themConfig/footer'
