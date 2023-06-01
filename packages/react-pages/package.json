@@ -1,6 +1,6 @@
 {
   "name": "@aliyun-sls/vite-plugin-react-pages",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "types": "./dist/node-types/index.d.ts",
   "exports": {
