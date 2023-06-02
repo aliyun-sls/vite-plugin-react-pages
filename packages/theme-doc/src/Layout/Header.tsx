@@ -179,7 +179,6 @@ function matchPath<
     pattern.caseSensitive,
     pattern.end
   );
-    console.log(pathname, matcher)
   let match = pathname.match(matcher);
   if (!match) return null;
 
@@ -282,7 +281,6 @@ const AppHeader: React.FC<React.PropsWithChildren<Props>> = (props) => {
             end: true,
           } as PathPattern<string>)
         const matchResult = matchUtil(matcher)
-        console.log(matchResult)
         if (matchResult) return item.path
       } else if ('subMenu' in item) {
         if (item.activeIfMatch) {
