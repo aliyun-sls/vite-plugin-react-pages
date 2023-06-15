@@ -1,6 +1,6 @@
 {
   "name": "@aliyun-sls/vite-pages-theme-doc",
-  "version": "0.1.2",
+  "version": "0.1.5",
   "description": "A document theme for vite-plugin-react-pages.",
   "type": "module",
   "module": "dist/index.js",
