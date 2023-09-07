@@ -13,5 +13,5 @@ ReactDom.render(
   <ClientAppWrapper>
     <App />
   </ClientAppWrapper>,
-  document.getElementById('root')
+  document.getElementById('app')
 )

@@ -277,7 +277,7 @@ export default async function setupPlugins(
       rehypePlugins: await getRehypePlugins(),
       // treat .md as mdx
       mdExtensions: [],
-      mdxExtensions: ['.md', '.mdx'],
+      mdxExtensions: ['.mdx'],
       providerImportSource: '@mdx-js/react',
     }),
     createMdxTransformPlugin(),

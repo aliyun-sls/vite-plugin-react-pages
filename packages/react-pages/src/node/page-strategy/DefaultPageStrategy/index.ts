@@ -4,15 +4,19 @@ import type { FileHandler, FindPages } from '../types.doc'
 
 export class DefaultPageStrategy extends PageStrategy {
   constructor(
-    opts: { extraFindPages?: FindPages; fileHandler?: FileHandler } = {}
+    opts: { extraFindPages?: FindPages; fileHandler?: FileHandler, isBuild?:false } = {}
   ) {
-    const { extraFindPages, fileHandler = defaultFileHandler } = opts
+    const { extraFindPages, fileHandler = defaultFileHandler, isBuild } = opts
     // pass a wrapped findPages function to super class
     super((pagesDir, helpersFromParent) => {
       // we can create our own helpers, providing a default fileHandler
       // and not using helpersFromParent
       const helpers = this.createHelpers(fileHandler)
-      helpers.watchFiles(pagesDir, '**/*$.{md,mdx,js,jsx,ts,tsx}')
+      if(isBuild){
+        helpers.watchFiles(pagesDir, '**/*$.{mdx,js}')
+      }else{
+        helpers.watchFiles(pagesDir, '**/*$.{md,mdx,js,jsx,ts,tsx}')
+      }
       if (typeof extraFindPages === 'function') {
         extraFindPages(pagesDir, helpers)
       }
